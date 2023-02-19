@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
-// import App from './App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AuthProvider } from "@arcana/auth";
 import { ProvideAuth } from "@arcana/auth-react";
@@ -28,8 +28,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ProvideAuth provider={provider}>
-      {/* <App /> */}
-      <Home />
+      <App />
+      {/* <Home /> */}
     </ProvideAuth>
   </React.StrictMode>
 );
