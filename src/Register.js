@@ -17,45 +17,45 @@ export default function Register(){
         rocContract.register('123',t,c);
     }
 
-    // async function ipfsUpload(e) {
-    //     var t= document.getElementById('img');
-    //     const file = e.target.files[0]
-    //     try{ //try uploading the file
-    //         const added = await client.add(
-    //             file,
-    //             {
-    //                 progress: (prog) => console.log(`received: ${prog}`)
-    //             }
-    //         )
-    //         //file saved in the url path below
-    //         const url = `https://ipfs.infura.io/ipfs/${added.path}`
-    //         setFileUrl(url)
-    //     }catch(e){
-    //         console.log('Error uploading file: ', e)
-    //     }
-    // }
+    async function ipfsUpload(e) {
+        var t= document.getElementById('img');
+        const file = e.target.files[0]
+        try{ //try uploading the file
+            const added = await client.add(
+                file,
+                {
+                    progress: (prog) => console.log(`received: ${prog}`)
+                }
+            )
+            //file saved in the url path below
+            const url = `https://ipfs.infura.io/ipfs/${added.path}`
+            setFileUrl(url)
+        }catch(e){
+            console.log('Error uploading file: ', e)
+        }
+    }
 
-    // async function createItem(){
-    //     const {name, description, price} = formInput; //get the value from the form input
+    async function createItem(){
+        const {name, description, price} = formInput; //get the value from the form input
         
-    //     //form validation
-    //     if(!name || !description || !price || !fileUrl) {
-    //         return
-    //     }
+        //form validation
+        if(!name || !description || !price || !fileUrl) {
+            return
+        }
 
-    //     const data = JSON.stringify({
-    //         name, description, image: fileUrl
-    //     });
+        const data = JSON.stringify({
+            name, description, image: fileUrl
+        });
 
-    //     try{
-    //         const added = await client.add(data)
-    //         const url = `https://ipfs.infura.io/ipfs/${added.path}`
-    //         //pass the url to sav eit on Polygon adter it has been uploaded to IPFS
-    //         return url;
-    //     }catch(error){
-    //         console.log(`Error uploading file: `, error)
-    //     }
-    // }
+        try{
+            const added = await client.add(data)
+            const url = `https://ipfs.infura.io/ipfs/${added.path}`
+            //pass the url to sav eit on Polygon adter it has been uploaded to IPFS
+            return url;
+        }catch(error){
+            console.log(`Error uploading file: `, error)
+        }
+    }
 
     return(
         <div className='Register-main'>
@@ -69,7 +69,7 @@ export default function Register(){
 
             <input id='img' type="file" name="Asset" className="my-4" onChange={''}/>
 
-            <button className='Register' onClick={upload()}>
+            <button className='Register' onClick={'upload()'}>
                 Register
             </button>
 

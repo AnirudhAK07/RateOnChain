@@ -4,11 +4,12 @@ import {useEffect,useState} from 'react';
 import roc from './roc_abi.json'
 import { FaStar } from 'react-icons/fa';
 import tom from './images/tom.jpeg'
+import logo from './images/roc.png'
 import connectWallet from "./utils/Connect";
 import { useNavigate } from 'react-router-dom';
 
 function Home() {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   var v;
 
   useEffect(()=>{
@@ -69,12 +70,15 @@ function Home() {
       <br></br>
       <br></br>
       <br></br>
-      <button className="connectButton" onClick={()=>navigate('/register')}>Register</button>
+
+      <button className="connectButton" onClick={''}>Register</button>
+
+      
       <div class="grid">
       <div className='Vdo-Container'>
         
         <div className='Vdo-box'>
-        <img src={tom} alt='img' width="200" height="200" />
+        <img src={logo} alt='img' width="200" height="200" />
           <p><em>Title</em></p>
           <p>Category : </p>
 
@@ -109,7 +113,7 @@ function Home() {
           <p>Category : </p>
 
           
-          <p>5.0  <FaStar color="goldenrod" /></p>
+          <p>0.0  <FaStar color="goldenrod" /></p>
           
           
           <div class="rate">
@@ -138,7 +142,7 @@ function Home() {
           <p>Category : </p>
 
           
-          <p>5.0  <FaStar color="goldenrod" /></p>
+          <p>0.0  <FaStar color="goldenrod" /></p>
           
           
           <div class="rate">
@@ -167,7 +171,7 @@ function Home() {
           <p>Category : </p>
 
           
-          <p>5.0  <FaStar color="goldenrod" /></p>
+          <p>0.0  <FaStar color="goldenrod" /></p>
           
           
           <div class="rate">
@@ -196,7 +200,7 @@ function Home() {
           <p>Category : </p>
 
           
-          <p>5.0  <FaStar color="goldenrod" /></p>
+          <p>0.0  <FaStar color="goldenrod" /></p>
           
           
           <div class="rate">

@@ -29,8 +29,8 @@ root.render(
   <React.StrictMode>
     <ProvideAuth provider={provider}>
       {/* <App /> */}
-      <Register/>
-      {/* <Home /> */}
+      {/* <Register/> */}
+      <Home />
     </ProvideAuth>
   </React.StrictMode>
 );
