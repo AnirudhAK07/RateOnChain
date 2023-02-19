@@ -3,16 +3,17 @@ import {ethers} from 'ethers';
 import {useEffect,useState} from 'react';
 import roc from './roc_abi.json'
 import { FaStar } from 'react-icons/fa';
-import { Auth, useAuth } from "@arcana/auth-react";
 import tom from './images/tom.jpeg'
+import connectWallet from "./utils/Connect";
 
 function Home() {
 
   var v;
 
   useEffect(()=>{
+    connectWallet();
     displayAll();
-  },[]);
+  });
 
   const [entity,setEntity] = useState([[]]);
 
@@ -49,7 +50,9 @@ function Home() {
   }
 
   function rate(id,value){
+    connectWallet();
     rocContract.rate(id,value,"");
+    console.log(value);
   }
 
   return (
@@ -87,7 +90,7 @@ function Home() {
             <label for="star1" title="text">1 star</label>
           </div>
 
-          <button className='rate-b' onClick={rate(1,v)}>RATE</button>
+          <button className='rate-b' onClick={''}>RATE</button>
         
         </div>
 

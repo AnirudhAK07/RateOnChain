@@ -1,5 +1,6 @@
 import {ethers} from 'ethers';
 import roc from './roc_abi.json'
+import connectWallet from "./utils/Connect";
 
 export default function Register(){
     var l=[];
