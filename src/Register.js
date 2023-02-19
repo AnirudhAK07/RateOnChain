@@ -11,6 +11,7 @@ export default function Register(){
     const rocContract = new ethers.Contract(rocContractAddress,roc.abi,signer);
 
     function upload(){
+        connectWallet();
         var t = document.getElementById('title').value;
         var c = document.getElementById('category').value;
         rocContract.register('123',t,c);
