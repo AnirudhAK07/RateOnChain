@@ -4,6 +4,7 @@ import {useEffect,useState} from 'react';
 import roc from './roc_abi.json'
 import { FaStar } from 'react-icons/fa';
 import { Auth, useAuth } from "@arcana/auth-react";
+import tom from './images/tom.jpeg'
 
 function Home() {
 
@@ -63,7 +64,7 @@ function Home() {
       <div className='Vdo-Container'>
         
         <div className='Vdo-box'>
-        {/* <img src='images/tom2.jpeg' alt='img' width="200" height="200" /> */}
+        <img src={tom} alt='img' width="200" height="200" />
           <p><em>Title</em></p>
           <p>Category : </p>
 
