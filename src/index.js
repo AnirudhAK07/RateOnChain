@@ -7,6 +7,7 @@ import { AuthProvider } from "@arcana/auth";
 import { ProvideAuth } from "@arcana/auth-react";
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Home from './Home'
+import Register from './Register'
 
 document.title="ROC";
 
@@ -15,7 +16,7 @@ export default function DApp() {
     <BrowserRouter>
       <Routes>
           <Route index element={<Home />}/>
-          <Route path="learner" element={''} />
+          <Route path="register" element={<Register/>} />
       </Routes>
     </BrowserRouter>
   );

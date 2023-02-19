@@ -94,11 +94,7 @@ function Home() {
             <label for="star1" title="text">1 star</label>
           </div>
 
-<<<<<<< HEAD
-          <button className='rate-b' onClick={rate(1,v)} >RATE</button>
-=======
-          <button className='rate-b' onClick={console.log(v)}>RATE</button>
->>>>>>> 800f9aad75d3610b39a76ae73f9719f4d2519d94
+          <button className='rate-b' onClick={''} >RATE</button>
         
         </div>
 

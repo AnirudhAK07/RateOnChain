@@ -5,7 +5,7 @@ import connectWallet from "./utils/Connect";
 export default function Register(){
     var l=[];
 
-    const rocContractAddress=''
+    const rocContractAddress='0x056B53d7Aa2D6895F394e6cb6d0d1CF9Cbd5eeC9'
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
     const rocContract = new ethers.Contract(rocContractAddress,roc.abi,signer);
