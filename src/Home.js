@@ -58,9 +58,36 @@ function Home() {
       <br></br>
       <br></br>
       <button className="connectButton">Connect to Wallet</button>
+      <div class="grid">
+      <div className='Vdo-Container'>
+        
+        <div className='Vdo-box'>
+        {/* <img src='images/tom2.jpeg' alt='img' width="200" height="200" /> */}
+          <p><em>Title</em></p>
+          <p>Category : </p>
 
-      <table>
-      <tr>  <td>
+          
+          <p>5.0  <FaStar color="goldenrod" /></p>
+          
+          
+          <div class="rate">
+            <input type="radio" id="star5" name="rate" value="5" onClick={v=5} />
+            <label for="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4" onChange={v=4}/>
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3" onChange={v=3}/>
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2" onChange={v=2}/>
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" onChange={v=1}/>
+            <label for="star1" title="text">1 star</label>
+          </div>
+
+          <button className='rate-b' onClick={console.log(v)}>RATE</button>
+        
+        </div>
+
+      </div>
       <div className='Vdo-Container'>
         
         <div className='Vdo-box'>
@@ -90,12 +117,10 @@ function Home() {
         </div>
 
       </div>
-      </td>
-      <td>
       <div className='Vdo-Container'>
         
         <div className='Vdo-box'>
-        {/* <img src='images/tom2.jpeg' alt='img' width="200" height="200" /> */}
+        <img src={tom} alt='img' width="200" height="200" />
           <p><em>Title</em></p>
           <p>Category : </p>
 
@@ -121,12 +146,10 @@ function Home() {
         </div>
 
       </div>
-      </td>
-      <td>
       <div className='Vdo-Container'>
         
         <div className='Vdo-box'>
-        {/* <img src='images/tom2.jpeg' alt='img' width="200" height="200" /> */}
+        <img src={tom} alt='img' width="200" height="200" />
           <p><em>Title</em></p>
           <p>Category : </p>
 
@@ -152,12 +175,10 @@ function Home() {
         </div>
 
       </div>
-      </td>
-      <td>
       <div className='Vdo-Container'>
         
         <div className='Vdo-box'>
-        {/* <img src='images/tom2.jpeg' alt='img' width="200" height="200" /> */}
+        <img src={tom} alt='img' width="200" height="200" />
           <p><em>Title</em></p>
           <p>Category : </p>
 
@@ -183,9 +204,7 @@ function Home() {
         </div>
 
       </div>
-      </td>
-      </tr>
-      </table>
+    </div>
     </div>
   );
 }

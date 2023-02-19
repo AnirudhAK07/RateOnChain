@@ -247,3 +247,18 @@ table {
   margin-left: auto;
   margin-right: auto;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  grid-gap: 20px;
+  background-color: #ccc;
+  padding: 20px;
+}
+
+.item {
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
