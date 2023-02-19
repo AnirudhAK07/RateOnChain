@@ -2,7 +2,7 @@ import { Auth, useAuth } from "@arcana/auth-react";
 import Home from './Home'
 
 const onLogin = () => {
-  // Route to authenticated page
+  // Route to authenticated page  
   return <Home/>
 }
 function App() {

@@ -5,9 +5,10 @@ import roc from './roc_abi.json'
 import { FaStar } from 'react-icons/fa';
 import tom from './images/tom.jpeg'
 import connectWallet from "./utils/Connect";
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
-
+  const navigate = useNavigate();
   var v;
 
   useEffect(()=>{
@@ -17,7 +18,7 @@ function Home() {
 
   const [entity,setEntity] = useState([[]]);
 
-  const rocContractAddress=''
+  const rocContractAddress='0x056B53d7Aa2D6895F394e6cb6d0d1CF9Cbd5eeC9'
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   const signer = provider.getSigner();
   const rocContract = new ethers.Contract(rocContractAddress,roc.abi,signer);
@@ -68,7 +69,7 @@ function Home() {
       <br></br>
       <br></br>
       <br></br>
-      <button className="connectButton">Register</button>
+      <button className="connectButton" onClick={()=>navigate('/register')}>Register</button>
       <div class="grid">
       <div className='Vdo-Container'>
         
