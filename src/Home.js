@@ -69,12 +69,12 @@ function Home() {
       <div className='Vdo-Container'>
         
         <div className='Vdo-box'>
-        {/* <img src='images/tom2.jpeg' alt='img' width="200" height="200" /> */}
+        <img src={tom} alt='img' width="200" height="200" />
           <p><em>Title</em></p>
           <p>Category : </p>
 
           
-          <p>5.0  <FaStar color="goldenrod" /></p>
+          <p>0.0  <FaStar color="goldenrod" /></p>
           
           
           <div class="rate">
@@ -90,7 +90,7 @@ function Home() {
             <label for="star1" title="text">1 star</label>
           </div>
 
-          <button className='rate-b' onClick={''}>RATE</button>
+          <button className='rate-b' onClick={rate(1,v)} >RATE</button>
         
         </div>
 
