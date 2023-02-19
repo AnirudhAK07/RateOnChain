@@ -12,7 +12,7 @@ function Home() {
 
   useEffect(()=>{
     displayAll();
-  });
+  },[]);
 
   const [entity,setEntity] = useState([[]]);
 
@@ -48,6 +48,10 @@ function Home() {
     console.log(entity);
   }
 
+  function rate(id,value){
+    rocContract.rate(id,value,"");
+  }
+
   return (
     
     <div className='Home'>
@@ -57,7 +61,7 @@ function Home() {
       <hr></hr>
       <br></br>
       <br></br>
-      <button className="connectButton">Connect to Wallet</button>
+      <button className="connectButton">Register</button>
       <div class="grid">
       <div className='Vdo-Container'>
         
@@ -73,17 +77,17 @@ function Home() {
           <div class="rate">
             <input type="radio" id="star5" name="rate" value="5" onClick={v=5} />
             <label for="star5" title="text">5 stars</label>
-            <input type="radio" id="star4" name="rate" value="4" onChange={v=4}/>
+            <input type="radio" id="star4" name="rate" value="4" onClick={v=4}/>
             <label for="star4" title="text">4 stars</label>
-            <input type="radio" id="star3" name="rate" value="3" onChange={v=3}/>
+            <input type="radio" id="star3" name="rate" value="3" onClick={v=3}/>
             <label for="star3" title="text">3 stars</label>
-            <input type="radio" id="star2" name="rate" value="2" onChange={v=2}/>
+            <input type="radio" id="star2" name="rate" value="2" onClick={v=2}/>
             <label for="star2" title="text">2 stars</label>
-            <input type="radio" id="star1" name="rate" value="1" onChange={v=1}/>
+            <input type="radio" id="star1" name="rate" value="1" onClick={v=1}/>
             <label for="star1" title="text">1 star</label>
           </div>
 
-          <button className='rate-b' onClick={console.log(v)}>RATE</button>
+          <button className='rate-b' onClick={rate(1,v)}>RATE</button>
         
         </div>
 
